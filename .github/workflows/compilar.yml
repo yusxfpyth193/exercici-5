@@ -8,7 +8,7 @@ jobs:
   runs-on: ubuntu-latest
   steps:
   name: Checkout del repo
-  uses: actions/checkout@v4
+  uses: actions/checkout@v6
 
   name: Compilar
   run: Make    
@@ -19,15 +19,16 @@ name: compile-test-mac
 on:
   push:
   branches: [test]
+
 jobs:
  build-mac:
   runs-on: macos-latest
   steps:
   name: Checkout del repo
-  uses: actions/checkout@v4
+  uses: actions/checkout@v6
 
   name: Compilar
-  run: Make    
+  run: Make
   with:
     name: makefile
     path: conversor.c
