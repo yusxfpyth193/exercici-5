@@ -1,0 +1,30 @@
+name: compile-test-linux
+on:
+ push:
+  branches: [test]
+
+jobs:
+  build-linux:
+  runs-on: ubuntu-latest
+  steps:
+  name: Checkout del repo
+  uses: actions/checkout@v4
+
+  name: Compilar
+  run: Make    
+  with: makefile
+  name: conversor.c
+
+name: compile-test-mac
+
+ build-mac:
+  runs-on: macos-latest
+  steps:
+  name: Checkout del repo
+  uses: actions/checkout@v4
+
+  name: Compilar
+  run: Make    
+  with:
+    name: makefile
+    path: conversor.c
