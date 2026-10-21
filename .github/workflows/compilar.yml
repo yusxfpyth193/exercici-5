@@ -16,7 +16,10 @@ jobs:
   name: conversor.c
 
 name: compile-test-mac
-
+on:
+  push:
+  branches: [test]
+jobs:
  build-mac:
   runs-on: macos-latest
   steps:
